@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { of, from, Observable } from 'rxjs';
+import { filter, first } from 'rxjs/operators';
 
 import { MyDocument } from '../model/document';
 
@@ -15,9 +16,16 @@ export class DocumentService {
 
   constructor() { }
 
-  getList()
+  getList():Observable<MyDocument[]>
   {
     return of(Docs);
+  }
+
+  getDocument(id:number):Observable<MyDocument>{
+    return from(Docs).pipe(
+      filter( (x) => x.id==id),
+      first()
+    );
   }
 
 }
