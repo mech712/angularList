@@ -7,7 +7,7 @@ import { DocumentComponent } from './component/document/document.component';
 const routes: Routes = [
   {path:"", component:ListComponent},
   {path:"list", component:ListComponent},
-  {path:"document", component:DocumentComponent}
+  {path:"document/:id", component:DocumentComponent}
 ];
 
 @NgModule({
