@@ -1,1 +1,26 @@
-<p>document works!</p>
+<form [formGroup]="docForm" novalidate (ngSubmit)="submit()">
+    
+    <div class="form-group">
+        <label>id</label>
+        <input class="form-control" name="id1" formControlName="id" />
+    </div>
+
+    <div class="form-group">
+        <label>name</label>
+        <input class="form-control" name="name1" formControlName="name" />
+    </div>
+
+    <div class="form-group">
+        <label>date</label>
+        <input class="form-control" name="date1" formControlName="timedate" />
+    </div>
+
+    <div class="form-group">
+        <label>description</label>
+        <input class="form-control" name="desc1" formControlName="description" />
+    </div>
+
+</form>
+
+<button (click)="back()">Назад</button>
+<button (click)="save()">Сохранить</button>
