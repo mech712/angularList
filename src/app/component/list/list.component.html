@@ -1,12 +1,3 @@
-<p>list works!</p>
-
-<div>
-    <table>
-        <tr>
-            <th>id</th><th>name</th><th>timedate</th><th>description</th>
-        </tr>
-        <tr *ngFor="let doc of docList">
-            <th>{{doc.id}}</th> <th>{{doc.name}}</th> <th>{{doc.timedate}}</th> <th>{{doc.description}}</th>
-        </tr>
-    </table>
+<div *ngFor="let doc of docList">
+    <a routerLink="/document/{{doc.id}}">{{doc.name}}</a>
 </div>
