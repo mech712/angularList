@@ -19,10 +19,10 @@ export class DocumentComponent implements OnInit {
   
   constructor(private docService:DocumentService, private route:ActivatedRoute, private location:Location) { 
     this.docForm = new FormGroup({
-      "id": new FormControl(""),
-      "name": new FormControl(""),
-      "timedate": new FormControl(""),
-      "description": new FormControl("")
+      "id": new FormControl(),
+      "name": new FormControl(),
+      "timedate": new FormControl(),
+      "description": new FormControl()
     });
   }
 
